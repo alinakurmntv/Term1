@@ -255,40 +255,6 @@ END //
 
 DELIMITER ;
 
--- Procedure to refresh MatchSummary with data about individual matches
-DELIMITER //
-CREATE PROCEDURE RefreshMatchSummary()
-BEGIN
-    DELETE FROM MatchSummary;
-    INSERT INTO MatchSummary
-    SELECT 
-        m.MatchID,
-        m.TournamentID,
-        m.MatchDate,
-        m.Stage,
-        m.HomeTeamID,
-        ht.TeamName AS HomeTeamName,
-        m.AwayTeamID,
-        at.TeamName AS AwayTeamName,
-        m.HomeTeamScore,
-        m.AwayTeamScore,
-        m.Outcome,
-        m.StadiumID,
-        s.StadiumName,
-        s.CityName,
-        s.CountryName,
-        s.StadiumCapacity
-    FROM 
-        Matches m
-    LEFT JOIN 
-        Teams ht ON m.HomeTeamID = ht.TeamID
-    LEFT JOIN 
-        Teams at ON m.AwayTeamID = at.TeamID
-    LEFT JOIN 
-        Stadiums s ON m.StadiumID = s.StadiumID;
-END //
-DELIMITER ;
-
 -- Trigger to refresh PlayerStatistics when a new goal is inserted
 DELIMITER //
 CREATE TRIGGER AfterGoalInsert
@@ -296,18 +262,6 @@ AFTER INSERT ON Goals
 FOR EACH ROW
 BEGIN
     CALL RefreshPlayerStatistics();
-END //
-DELIMITER ;
-
--- Trigger to refresh match-related summaries when a new match is added
-DELIMITER //
-CREATE TRIGGER AfterMatchInsert
-AFTER INSERT ON Matches
-FOR EACH ROW
-BEGIN
-    CALL RefreshMatchSummary();
-    CALL RefreshTeamPerformance();
-    CALL RefreshTournamentSummary();
 END //
 DELIMITER ;
 
