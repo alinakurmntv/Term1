@@ -1,0 +1,22 @@
+tournament_id;year;host_country;winner;count_teams;group_stage;final_round;round_of_16;quarter_finals;semi_finals
+WC-1930;1930;Uruguay;Uruguay;13;1;0;0;0;1
+WC-1934;1934;Italy;Italy;16;0;0;1;1;1
+WC-1938;1938;France;Italy;15;0;0;1;1;1
+WC-1950;1950;Brazil;Uruguay;13;1;1;0;0;0
+WC-1954;1954;Switzerland;West Germany;16;1;0;0;1;1
+WC-1958;1958;Sweden;Brazil;16;1;0;0;1;1
+WC-1962;1962;Chile;Brazil;16;1;0;0;1;1
+WC-1966;1966;England;England;16;1;0;0;1;1
+WC-1970;1970;Mexico;Brazil;16;1;0;0;1;1
+WC-1974;1974;West Germany;West Germany;16;1;0;0;0;0
+WC-1978;1978;Argentina;Argentina;16;1;0;0;0;0
+WC-1982;1982;Spain;Italy;24;1;0;0;0;1
+WC-1986;1986;Mexico;Argentina;24;1;0;1;1;1
+WC-1990;1990;Italy;West Germany;24;1;0;1;1;1
+WC-1994;1994;United States;Brazil;24;1;0;1;1;1
+WC-1998;1998;France;France;32;1;0;1;1;1
+WC-2002;2002;Korea, Japan;Brazil;32;1;0;1;1;1
+WC-2006;2006;Germany;Italy;32;1;0;1;1;1
+WC-2010;2010;South Africa;Spain;32;1;0;1;1;1
+WC-2014;2014;Brazil;Germany;32;1;0;1;1;1
+WC-2018;2018;Russia;France;32;1;0;1;1;1
