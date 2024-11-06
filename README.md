@@ -7,7 +7,9 @@ The datasets used in this project are available in the "Term1" folder. These dat
 The main purpose of this project was to create an operational and analytical data layer for World Cup data that will allow YOU, the user, to extract meaningful insights. This includes:
 
 -- Organize the data into a relational model suitable for complex queries.
+
 -- Support analysis through views, materialized views, and an ETL pipeline.
+
 -- Provide a denormalized data structure for easier querying and reporting.
 
 When approaching this project I was curious in finding out the win probability for each country in each tournament, examining team performance across regional confederations, and identifying the top goal-scorers among players. To address them, the following views and calculations were implemented:
